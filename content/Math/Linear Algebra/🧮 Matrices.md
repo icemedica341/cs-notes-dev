@@ -116,14 +116,13 @@ $$
 ### 🧭 Vector Notation
 
 - Column matrix (vector): $\mathbf{a}$ or $\vec{a}$
-  $$
-  \mathbf{\vec{a}} = \begin{bmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{bmatrix}
-
- $$
+$$
+\mathbf{\vec{a}} = \begin{bmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{bmatrix}
+$$
 - Row matrix (vector): $\mathbf{b}$ or $\vec{b}$
-  $$
- \mathbf{\vec{b}} = [b_1, b_2, \dots, b_m]
- $$
+$$
+\mathbf{\vec{b}} = [b_1, b_2, \dots, b_m]
+$$
 
 > [!Note]
 > In written documents, vectors are often **bolded**
