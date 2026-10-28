@@ -106,10 +106,9 @@ html {
   display: flex;
   gap: 0.5rem;
   padding: 0.25rem 0 0.5rem;
-  // No position:sticky. The toolbar is a SIBLING above .explorer-content (not
-  // inside the scroller), so it stays put while the tree scrolls under it. When
-  // it was sticky inside the scroller with an opaque background and z-index,
-  // folder rows scrolling upward disappeared behind it.
+  /* Not sticky on purpose: the toolbar is inserted inside the scrolling
+     .explorer-content, so an opaque sticky bar hides folder rows that scroll
+     behind it. Scrolling away with the list is the lesser evil. */
 }
 .explorer .explorer-loop6-btn {
   background-color: transparent;

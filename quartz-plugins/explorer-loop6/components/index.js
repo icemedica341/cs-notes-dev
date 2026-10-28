@@ -59,7 +59,7 @@ function applyDefaultOpen(root) {
 function refreshToolbar(root) {
   var content = contentOf(root);
   if (!content) return;
-  var bar = root.querySelector(":scope > .explorer-loop6-toolbar");
+  var bar = content.querySelector(":scope > .explorer-loop6-toolbar");
   if (!bar) return;
   var toggle = bar.querySelector('[data-loop6="toggle-all"]');
   var open = allOpen(root);
@@ -72,7 +72,7 @@ function refreshToolbar(root) {
 function ensureToolbar(root) {
   var content = contentOf(root);
   if (!content) return;
-  var bar = root.querySelector(":scope > .explorer-loop6-toolbar");
+  var bar = content.querySelector(":scope > .explorer-loop6-toolbar");
   if (!bar) {
     bar = document.createElement("div");
     bar.className = "explorer-loop6-toolbar";
@@ -84,7 +84,7 @@ function ensureToolbar(root) {
     toggle.setAttribute("data-loop6", "toggle-all");
     toggle.addEventListener("click", function (ev) { ev.stopPropagation(); setAll(root, !allOpen(root)); });
     bar.appendChild(toggle);
-    root.insertBefore(bar, content);
+    content.insertBefore(bar, content.firstChild);
   }
   refreshToolbar(root);
 }
