@@ -118,7 +118,7 @@ function applySort(root) {
 function ensureSortButton(root) {
   var content = contentOf(root);
   if (!content) return;
-  var bar = content.querySelector(":scope > .explorer-loop6-toolbar");
+  var bar = root.querySelector(":scope > .explorer-loop6-toolbar");
   if (!bar) return;
   var btn = bar.querySelector('[data-loop7="toggle-sort"]');
   if (!btn) {
@@ -139,7 +139,7 @@ function ensureSortButton(root) {
 function refreshSortButton(root) {
   var content = contentOf(root);
   if (!content) return;
-  var bar = content.querySelector(":scope > .explorer-loop6-toolbar");
+  var bar = root.querySelector(":scope > .explorer-loop6-toolbar");
   if (!bar) return;
   var btn = bar.querySelector('[data-loop7="toggle-sort"]');
   if (!btn) return;
